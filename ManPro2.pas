@@ -1126,6 +1126,12 @@ type
     EstBarPesq: TwwQuery;
     edDESCANP: TdxDBColorEdit;
     EstProDESCANP: TStringField;
+    Label163: TLabel;
+    dxDBColorEdit12: TdxDBColorEdit;
+    Label164: TLabel;
+    dxDBColorEdit14: TdxDBColorEdit;
+    EstProIBSCBS_CST: TStringField;
+    EstProIBSCBS_C_CLASS_TRIB: TStringField;
     procedure CriarForm(frmClass: TFormClass; out Obj);
     procedure pcPag1Show(Sender: TObject);
     procedure grPro1CellChanged(Sender: TObject);

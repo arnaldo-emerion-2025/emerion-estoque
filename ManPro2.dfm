@@ -1,10 +1,10 @@
 inherited fmManPro2: TfmManPro2
-  Left = 345
-  Top = 58
+  Left = 480
+  Top = 253
   BorderStyle = bsNone
   Caption = 'Itens'
   ClientHeight = 618
-  ClientWidth = 844
+  ClientWidth = 842
   Color = 15788249
   Font.Height = 668
   OnClose = FormClose
@@ -84,7 +84,7 @@ inherited fmManPro2: TfmManPro2
     Top = 0
     Width = 848
     Height = 620
-    ActivePage = pcPag4
+    ActivePage = pcPag3
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -2290,7 +2290,7 @@ inherited fmManPro2: TfmManPro2
         Transparent = True
       end
       object Label115: TLabel
-        Left = 428
+        Left = 405
         Top = 373
         Width = 44
         Height = 13
@@ -2304,7 +2304,7 @@ inherited fmManPro2: TfmManPro2
         Transparent = True
       end
       object Label151: TLabel
-        Left = 568
+        Left = 545
         Top = 373
         Width = 54
         Height = 13
@@ -2352,6 +2352,34 @@ inherited fmManPro2: TfmManPro2
           44480F00004FFFF4F4880FFFFF4FFFF448880F00F044444488880FFFF0F08888
           88880FFFF0088888888800000088888888888888888888888888}
         OnClick = btnEdCbaProClick
+      end
+      object Label163: TLabel
+        Left = 695
+        Top = 373
+        Width = 64
+        Height = 13
+        Caption = 'IBSCBS CST'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = True
+      end
+      object Label164: TLabel
+        Left = 666
+        Top = 349
+        Width = 97
+        Height = 13
+        Caption = 'IBSCBS Class Trib'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Transparent = True
       end
       object EdCodClp: TdxDBColorEdit
         Left = 116
@@ -2830,9 +2858,9 @@ inherited fmManPro2: TfmManPro2
         StoredValues = 64
       end
       object dxDBColorLookupEdit7: TdxDBColorLookupEdit
-        Left = 139
+        Left = 113
         Top = 345
-        Width = 700
+        Width = 549
         Color = 16577773
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -4038,7 +4066,7 @@ inherited fmManPro2: TfmManPro2
       object dxDBColorEdit13: TdxDBColorEdit
         Left = 303
         Top = 369
-        Width = 124
+        Width = 100
         Color = 16577773
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
@@ -4063,7 +4091,7 @@ inherited fmManPro2: TfmManPro2
         StoredValues = 3
       end
       object edFCPEntrada: TdxDBColorEdit
-        Left = 476
+        Left = 453
         Top = 369
         Width = 90
         Color = 16577773
@@ -4091,7 +4119,7 @@ inherited fmManPro2: TfmManPro2
         StoredValues = 3
       end
       object edFCPSaida: TdxDBColorEdit
-        Left = 624
+        Left = 601
         Top = 369
         Width = 89
         Color = 16577773
@@ -4113,6 +4141,62 @@ inherited fmManPro2: TfmManPro2
         Alignment = taLeftJustify
         CharCase = ecUpperCase
         DataField = 'COD_FCP_SAIDA'
+        DataSource = DsPro
+        MaxLength = 10
+        CorDeFoco = clInfoBk
+        StoredValues = 3
+      end
+      object dxDBColorEdit12: TdxDBColorEdit
+        Left = 768
+        Top = 369
+        Width = 70
+        Color = 16577773
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Style.BorderColor = 14789952
+        Style.BorderStyle = xbsSingle
+        Style.ButtonStyle = btsSimple
+        Style.ButtonTransparence = ebtInactive
+        Style.HotTrack = True
+        Style.Shadow = True
+        TabOrder = 62
+        OnKeyDown = edFCPSaidaKeyDown
+        OnKeyPress = dxDBColorEdit6KeyPress
+        Alignment = taLeftJustify
+        CharCase = ecUpperCase
+        DataField = 'IBSCBS_CST'
+        DataSource = DsPro
+        MaxLength = 10
+        CorDeFoco = clInfoBk
+        StoredValues = 3
+      end
+      object dxDBColorEdit14: TdxDBColorEdit
+        Left = 768
+        Top = 345
+        Width = 70
+        Color = 16577773
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        Style.BorderColor = 14789952
+        Style.BorderStyle = xbsSingle
+        Style.ButtonStyle = btsSimple
+        Style.ButtonTransparence = ebtInactive
+        Style.HotTrack = True
+        Style.Shadow = True
+        TabOrder = 63
+        OnKeyDown = edFCPSaidaKeyDown
+        OnKeyPress = dxDBColorEdit6KeyPress
+        Alignment = taLeftJustify
+        CharCase = ecUpperCase
+        DataField = 'IBSCBS_C_CLASS_TRIB'
         DataSource = DsPro
         MaxLength = 10
         CorDeFoco = clInfoBk
@@ -9201,7 +9285,9 @@ inherited fmManPro2: TfmManPro2
       '  COD_FCP_SAIDA = :COD_FCP_SAIDA,'
       '  COD_FCP_ENTRADA = :COD_FCP_ENTRADA,'
       '  FCI = :FCI,'
-      '  DESCANP = :DESCANP'
+      '  DESCANP = :DESCANP,'
+      '  IBSCBS_CST = :IBSCBS_CST,'
+      '  IBSCBS_C_CLASS_TRIB = :IBSCBS_C_CLASS_TRIB'
       'where'
       '  CODCLP = :OLD_CODCLP and'
       '  CODGRU = :OLD_CODGRU and'
@@ -9209,81 +9295,92 @@ inherited fmManPro2: TfmManPro2
       '  CODPRO = :OLD_CODPRO')
     InsertSQL.Strings = (
       'insert into EstPro'
-      
-        '  (CODCLP, CODGRU, CODSUB, CODPRO, DSCPRO, DSRPRO, CBAPRO, CBAEM' +
-        'B, QTDEMB, '
+      '  (CODCLP, CODGRU, CODSUB, CODPRO, DSCPRO, DSRPRO, CBAPRO, '
+      'CBAEMB, QTDEMB, '
       
         '   CATPRO, LOCPRO, REFPRO, ISSPRO, CODUNE, QTEPRO, CODUNS, QTSPR' +
-        'O, FLBPRO, '
-      
-        '   WEBPRO, DTCPRO, OBSPRO, CODST1, CODST2, CODTIP, CODCOM, CODUS' +
-        'U, PESLIQ, '
+        'O, '
+      'FLBPRO, '
+      '   WEBPRO, DTCPRO, OBSPRO, CODST1, CODST2, CODTIP, CODCOM, '
+      'CODUSU, PESLIQ, '
       
         '   PESBRT, SAIICM, ENTICM, SAIIPI, ENTIPI, IMGPRO, CODSTE, TIPST' +
-        'E, CODSTS, '
+        'E, '
+      'CODSTS, '
       
         '   TIPSTS, CODANT, SIMPRO, NUMPRO, FLGTRG, QTDVOL, CODMRC, IDEPR' +
-        'O, CODCAT, '
+        'O, '
+      'CODCAT, '
       
         '   ICMSAI, ICMTSD, ICMENT, ICMTEN, IPISAI, IPITSD, IPIENT, IPITE' +
         'N, CLFENT, '
       
         '   CLFSAI, FLGPRO, FLGKIT, CBAEM2, CBAEM3, LIQEMB, BRTEMB, CUBPR' +
-        'O, CXAPRO, '
+        'O, '
+      'CXAPRO, '
       
         '   ENTIMP, CODBAR, DESIMP, DESIM2, VALIMP, DSCIMP, DSRIMP, DESNC' +
-        '1, DESNC2, '
+        '1, '
+      'DESNC2, '
       
         '   DESNC3, DESNC4, DESNC5, DESNC6, DESNC7, DESNC8, FLGLIS, PESCU' +
-        'B, ALTPRO, '
-      
-        '   COMPRO, LARPRO, GARPRO, PRODEP, ID2PRO, ID_REGRA_PIS, ID_REGR' +
-        'A_COFINS, '
-      
-        '   ID_REGRA_PIS_ENTRADA, ID_REGRA_COFINS_ENTRADA, CODNCM, CODANP' +
-        ', CODIF, '
-      '   FLGATU, CEST, COD_FCP_SAIDA, COD_FCP_ENTRADA, FCI, DESCANP)'
+        'B, '
+      'ALTPRO, '
+      '   COMPRO, LARPRO, GARPRO, PRODEP, ID2PRO, ID_REGRA_PIS, '
+      'ID_REGRA_COFINS, '
+      '   ID_REGRA_PIS_ENTRADA, ID_REGRA_COFINS_ENTRADA, CODNCM, '
+      'CODANP, CODIF, '
+      '   FLGATU, CEST, COD_FCP_SAIDA, COD_FCP_ENTRADA, FCI, DESCANP, '
+      'IBSCBS_CST, '
+      '   IBSCBS_C_CLASS_TRIB)'
       'values'
       
         '  (:CODCLP, :CODGRU, :CODSUB, :CODPRO, :DSCPRO, :DSRPRO, :CBAPRO' +
-        ', :CBAEMB, '
+        ', '
+      ':CBAEMB, '
       
         '   :QTDEMB, :CATPRO, :LOCPRO, :REFPRO, :ISSPRO, :CODUNE, :QTEPRO' +
-        ', :CODUNS, '
+        ', '
+      ':CODUNS, '
       
         '   :QTSPRO, :FLBPRO, :WEBPRO, :DTCPRO, :OBSPRO, :CODST1, :CODST2' +
-        ', :CODTIP, '
+        ', '
+      ':CODTIP, '
       
         '   :CODCOM, :CODUSU, :PESLIQ, :PESBRT, :SAIICM, :ENTICM, :SAIIPI' +
         ', :ENTIPI, '
       
         '   :IMGPRO, :CODSTE, :TIPSTE, :CODSTS, :TIPSTS, :CODANT, :SIMPRO' +
-        ', :NUMPRO, '
+        ', '
+      ':NUMPRO, '
       
         '   :FLGTRG, :QTDVOL, :CODMRC, :IDEPRO, :CODCAT, :ICMSAI, :ICMTSD' +
-        ', :ICMENT, '
+        ', '
+      ':ICMENT, '
       
         '   :ICMTEN, :IPISAI, :IPITSD, :IPIENT, :IPITEN, :CLFENT, :CLFSAI' +
         ', :FLGPRO, '
       
         '   :FLGKIT, :CBAEM2, :CBAEM3, :LIQEMB, :BRTEMB, :CUBPRO, :CXAPRO' +
-        ', :ENTIMP, '
+        ', '
+      ':ENTIMP, '
       
         '   :CODBAR, :DESIMP, :DESIM2, :VALIMP, :DSCIMP, :DSRIMP, :DESNC1' +
-        ', :DESNC2, '
+        ', '
+      ':DESNC2, '
       
         '   :DESNC3, :DESNC4, :DESNC5, :DESNC6, :DESNC7, :DESNC8, :FLGLIS' +
-        ', :PESCUB, '
-      
-        '   :ALTPRO, :COMPRO, :LARPRO, :GARPRO, :PRODEP, :ID2PRO, :ID_REG' +
-        'RA_PIS, '
-      
-        '   :ID_REGRA_COFINS, :ID_REGRA_PIS_ENTRADA, :ID_REGRA_COFINS_ENT' +
-        'RADA, :CODNCM, '
+        ', '
+      ':PESCUB, '
+      '   :ALTPRO, :COMPRO, :LARPRO, :GARPRO, :PRODEP, :ID2PRO, '
+      ':ID_REGRA_PIS, '
+      '   :ID_REGRA_COFINS, :ID_REGRA_PIS_ENTRADA, '
+      ':ID_REGRA_COFINS_ENTRADA, :CODNCM, '
       
         '   :CODANP, :CODIF, :FLGATU, :CEST, :COD_FCP_SAIDA, :COD_FCP_ENT' +
-        'RADA, :FCI, '
-      '   :DESCANP)')
+        'RADA, '
+      ':FCI, '
+      '   :DESCANP, :IBSCBS_CST, :IBSCBS_C_CLASS_TRIB)')
     DeleteSQL.Strings = (
       'delete from EstPro'
       'where'
@@ -9866,6 +9963,16 @@ inherited fmManPro2: TfmManPro2
     object EstProDESCANP: TStringField
       FieldName = 'DESCANP'
       Size = 80
+    end
+    object EstProIBSCBS_CST: TStringField
+      FieldName = 'IBSCBS_CST'
+      FixedChar = True
+      Size = 3
+    end
+    object EstProIBSCBS_C_CLASS_TRIB: TStringField
+      FieldName = 'IBSCBS_C_CLASS_TRIB'
+      FixedChar = True
+      Size = 6
     end
   end
   object FinCom: TwwQuery
