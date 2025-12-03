@@ -1,0 +1,1 @@
+remoto##201.6.184.243:/rede/_wgdad/interbase/newimports.fdb @@Servidor Remoto ***192.168.5.100:/opt/firebird/security.fdb***
