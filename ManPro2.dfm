@@ -84,7 +84,7 @@ inherited fmManPro2: TfmManPro2
     Top = 0
     Width = 848
     Height = 620
-    ActivePage = pcPag3
+    ActivePage = pcPag2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -4164,13 +4164,13 @@ inherited fmManPro2: TfmManPro2
         Style.HotTrack = True
         Style.Shadow = True
         TabOrder = 62
-        OnKeyDown = edFCPSaidaKeyDown
+        TabStop = False
         OnKeyPress = dxDBColorEdit6KeyPress
         Alignment = taLeftJustify
         CharCase = ecUpperCase
         DataField = 'IBSCBS_CST'
         DataSource = DsPro
-        MaxLength = 10
+        MaxLength = 3
         CorDeFoco = clInfoBk
         StoredValues = 3
       end
@@ -4192,13 +4192,12 @@ inherited fmManPro2: TfmManPro2
         Style.HotTrack = True
         Style.Shadow = True
         TabOrder = 63
-        OnKeyDown = edFCPSaidaKeyDown
-        OnKeyPress = dxDBColorEdit6KeyPress
+        TabStop = False
         Alignment = taLeftJustify
         CharCase = ecUpperCase
         DataField = 'IBSCBS_C_CLASS_TRIB'
         DataSource = DsPro
-        MaxLength = 10
+        MaxLength = 6
         CorDeFoco = clInfoBk
         StoredValues = 3
       end
