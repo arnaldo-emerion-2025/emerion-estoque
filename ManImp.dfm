@@ -1,9 +1,9 @@
 inherited fmManImp: TfmManImp
   Tag = 4
-  Left = 384
-  Top = 74
+  Left = 594
+  Top = 218
   Caption = 'Alterações Cadastrais de Itens'
-  ClientHeight = 540
+  ClientHeight = 559
   ClientWidth = 774
   Position = poDesigned
   OnClose = FormClose
@@ -1421,6 +1421,38 @@ inherited fmManImp: TfmManImp
     ParentFont = False
     Transparent = True
   end
+  object Label35: TLabel
+    Left = 10
+    Top = 537
+    Width = 88
+    Height = 13
+    Caption = 'IBSCBS Class Trib:'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = True
+  end
+  object Label36: TLabel
+    Left = 258
+    Top = 537
+    Width = 61
+    Height = 13
+    Caption = 'IBSCBS CST:'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Transparent = True
+  end
   object EdPsqCodPro: TdxColorEdit
     Left = 141
     Top = 166
@@ -2210,7 +2242,7 @@ inherited fmManImp: TfmManImp
   end
   object BbConf: TBitBtn
     Left = 429
-    Top = 487
+    Top = 519
     Width = 170
     Height = 33
     Hint = 'Realizar Atualizações'
@@ -2265,7 +2297,7 @@ inherited fmManImp: TfmManImp
   end
   object BbCanc: TBitBtn
     Left = 601
-    Top = 487
+    Top = 519
     Width = 170
     Height = 33
     Hint = 'Retornar a Tela Anterior'
@@ -2817,6 +2849,54 @@ inherited fmManImp: TfmManImp
     TabOrder = 55
     CharCase = ecUpperCase
     MaxLength = 0
+    CorDeFoco = clInfoBk
+    StoredValues = 2
+  end
+  object edCClassTrib: TdxColorEdit
+    Left = 141
+    Top = 533
+    Width = 86
+    Hint = 'Item'
+    Color = 16577773
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Style.BorderColor = 14789952
+    Style.BorderStyle = xbsSingle
+    Style.ButtonStyle = btsSimple
+    Style.ButtonTransparence = ebtInactive
+    Style.HotTrack = True
+    Style.Shadow = True
+    TabOrder = 56
+    CharCase = ecUpperCase
+    MaxLength = 6
+    CorDeFoco = clInfoBk
+    StoredValues = 2
+  end
+  object edCst: TdxColorEdit
+    Left = 325
+    Top = 533
+    Width = 86
+    Hint = 'Item'
+    Color = 16577773
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    Style.BorderColor = 14789952
+    Style.BorderStyle = xbsSingle
+    Style.ButtonStyle = btsSimple
+    Style.ButtonTransparence = ebtInactive
+    Style.HotTrack = True
+    Style.Shadow = True
+    TabOrder = 57
+    CharCase = ecUpperCase
+    MaxLength = 3
     CorDeFoco = clInfoBk
     StoredValues = 2
   end

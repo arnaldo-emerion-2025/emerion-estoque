@@ -129,6 +129,10 @@ type
     Label33: TLabel;
     Label34: TLabel;
     edNCM: TdxColorEdit;
+    edCClassTrib: TdxColorEdit;
+    Label35: TLabel;
+    edCst: TdxColorEdit;
+    Label36: TLabel;
     procedure EdPsqCodEmpKeyPress(Sender: TObject; var Key: Char);
     procedure EdPsqCodEmpExit(Sender: TObject);
     procedure BbPsqEmpClick(Sender: TObject);
@@ -1382,6 +1386,11 @@ begin
         sUpdate := sUpdate + ' ,CodSts = ''' + EdCodSts.Text + ''', TipSts = ''' + 'Saida' + '''';
       if Trim(edNCM.Text) <> '' then
         sUpdate := sUpdate + ' ,CODNCM = ''' + edNCM.Text + '''';
+
+      if Trim(edCClassTrib.Text) <> '' then
+        sUpdate := sUpdate + ' ,IBSCBS_C_CLASS_TRIB = ' + QuotedStr(edCClassTrib.Text);
+      if Trim(edCst.Text) <> '' then
+        sUpdate := sUpdate + ' ,IBSCBS_CST = ' + QuotedStr(edCst.Text);
 
       if Pos(',', sUpdate) > 0 then
       begin
